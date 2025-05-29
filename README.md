@@ -1,2 +1,2 @@
 # Surface_Code
-Surface Code Modeling and Sumulating Error Rate
+Surface Code Modeling and Simulating Error Rate
