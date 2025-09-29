@@ -93,7 +93,7 @@ def total_sumulation(list_of_distance, list_of_probability, iteration=1000):
         result_distance = []
         for probability in list_of_probability:
             logical_error = 0
-            p_eff = min(probability, 0.499)           # BP-OSD 확률 설정
+            p_eff = min(2*probability, 0.499)           # BP-OSD 확률 설정
             for i in range(iteration):
                 logical_error += one_cycle_simulation(target_surface, probability, p_eff)
             rate_logical_error = logical_error / iteration
@@ -408,4 +408,5 @@ def correction_bits(bits, cols, idx_to_qubit, is_X=True):
             dq = idx_to_qubit.get(dq_idx)
             if dq is not None:
                 dq.value = flip(dq.value, do_X)
+
 
